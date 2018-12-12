@@ -16,7 +16,7 @@ public class ApplesAndPairs {
 	
 	//create motor objects
 	static RegulatedMotor extender = new EV3MediumRegulatedMotor(MotorPort.A);
-	static RegulatedMotor driver = new EV3LargeRegulatedMotor(MotorPort.B);
+	static RegulatedMotor driver = new EV3LargeRegulatedMotor(MotorPort.D);
 	static RegulatedMotor riser = new EV3LargeRegulatedMotor(MotorPort.C);
 	
 	//create sensor objects
@@ -38,9 +38,9 @@ public class ApplesAndPairs {
 		Behavior b2 = new Slow();
 		Behavior b3 = new Rise();
 		Behavior b4 = new Extend();
-		//Behavior b5 = new Light();
-		//Behavior b6 = new EStop();	
-		Behavior[] behaviors = {debug,b1,b2,b3,b4};
+		Behavior b5 = new Lift();
+		Behavior b6 = new Fold();	
+		Behavior[] behaviors = {debug,b1,b2,b3,b4,b5,b6};
 		Arbitrator ab = new Arbitrator(behaviors);
 		
 		stage = 0;
