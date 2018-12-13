@@ -18,6 +18,7 @@ public class ApplesAndPairs {
 	static RegulatedMotor extender = new EV3MediumRegulatedMotor(MotorPort.A);
 	static RegulatedMotor driver = new EV3LargeRegulatedMotor(MotorPort.D);
 	static RegulatedMotor riser = new EV3LargeRegulatedMotor(MotorPort.C);
+	static RegulatedMotor riser2 = new EV3LargeRegulatedMotor(MotorPort.C);
 	
 	//create sensor objects
 	static EV3UltrasonicSensor us = new EV3UltrasonicSensor(SensorPort.S1);
@@ -28,11 +29,12 @@ public class ApplesAndPairs {
 	//create global variables
 	public static int stage;
 	public static float distFromWall;
-	
+	public static int riseHeight;
 	
 	public static void main(String[] args) {
 		//approach, slow, rise, extend (+stop rise), lift, fold, approach...
 		//0,0,0->1,1
+		riser.synchronizeWith(new RegulatedMotor[]{riser2});
 		Behavior debug = new Debug();
 		Behavior b1 = new Approach();
 		Behavior b2 = new Slow();

@@ -4,13 +4,13 @@ public class Fold implements Behavior {
 
 	@Override
 	public boolean takeControl() {
-		// TODO Auto-generated method stub
-		return false;
+		return (ApplesAndPairs.stage == 4 && !ApplesAndPairs.extender.isMoving());
 	}
 
 	@Override
 	public void action() {
-		// TODO Auto-generated method stub
+		ApplesAndPairs.extender.setSpeed(ApplesAndPairs.BASE_SPEED);
+		ApplesAndPairs.extender.backward();
 
 	}
 

@@ -14,7 +14,12 @@ public class Extend implements Behavior{
 	public void action() {
 		// TODO Auto-generated method stub
 		Delay.msDelay(100);
+		ApplesAndPairs.riser.startSynchronization();
+
 		ApplesAndPairs.riser.stop();
+		ApplesAndPairs.riser2.stop();
+		ApplesAndPairs.riser.endSynchronization();
+		ApplesAndPairs.riseHeight = riser.getTachoCount() ;
 		ApplesAndPairs.extender.setSpeed(ApplesAndPairs.BASE_SPEED);
 		ApplesAndPairs.extender.forward();
 		while(!ApplesAndPairs.extender.isStalled()) {

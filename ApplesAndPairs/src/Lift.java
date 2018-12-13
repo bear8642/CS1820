@@ -4,13 +4,19 @@ public class Lift implements Behavior {
 
 	@Override
 	public boolean takeControl() {
-		// TODO Auto-generated method stub
-		return false;
+		return(ApplesAndPairs.stage==2 && !ApplesAndPairs.riser.isMoving());
 	}
 
 	@Override
 	public void action() {
-		// TODO Auto-generated method stub
+		ApplesAndPairs.riser.startSynchronization();
+		ApplesAndPairs.riser.setSpeed(ApplesAndPairs.BASE_SPEED);
+		ApplesAndPairs.riser2.setSpeed(ApplesAndPairs.BASE_SPEED);
+		ApplesAndPairs.riser.rotate(ApplesAndPairs.riseHeight);
+		ApplesAndPairs.riser2.rotate(ApplesAndPairs.riseHeight);
+		
+		ApplesAndPairs.riser.endSynchronization();
+		ApplesAndPairs.stage = 3;
 
 	}
 

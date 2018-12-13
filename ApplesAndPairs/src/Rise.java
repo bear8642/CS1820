@@ -15,8 +15,13 @@ public class Rise implements Behavior{
 		ApplesAndPairs.driver.stop();
 		//ApplesAndPairs.driver.rotate(-180);
 		ApplesAndPairs.distFromWall = samples[0];
+		ApplesAndPairs.riser.startSynchronization();
 		ApplesAndPairs.riser.setSpeed(300);
+		ApplesAndPairs.riser2.setSpeed(300);
 		ApplesAndPairs.riser.backward();
+		ApplesAndPairs.riser2.backward();
+		
+		ApplesAndPairs.riser.endSynchronization();
 		
 	}
 
