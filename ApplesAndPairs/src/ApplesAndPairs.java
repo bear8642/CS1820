@@ -41,8 +41,9 @@ public class ApplesAndPairs {
 		Behavior b3 = new Rise();
 		Behavior b4 = new Extend();
 		Behavior b5 = new Lift();
-		Behavior b6 = new Fold();	
-		Behavior[] behaviors = {debug,b1,b2,b3,b4,b5,b6};
+		Behavior b6 = new Fold();
+		Behavior b7 = new Reset();	
+		Behavior[] behaviors = {debug, b1, b2, b3, b4, b5, b6, b7};
 		Arbitrator ab = new Arbitrator(behaviors);
 		
 		stage = 0;
