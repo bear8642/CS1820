@@ -11,7 +11,7 @@ public class Reset implements Behavior{
 	@Override
 	public void action() {
 		ApplesAndPairs.extender.stop();
-		ApplesAndPairs.stage == 0;
+		ApplesAndPairs.stage = 0;
 	}
 
 	@Override
