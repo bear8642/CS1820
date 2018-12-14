@@ -4,7 +4,7 @@ public class Fold implements Behavior {
 
 	@Override
 	public boolean takeControl() {
-		return (ApplesAndPairs.stage == 4 && !ApplesAndPairs.extender.isMoving());
+		return (ApplesAndPairs.stage == 3 && !ApplesAndPairs.extender.isMoving());
 	}
 
 	@Override
